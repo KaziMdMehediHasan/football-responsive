@@ -49,11 +49,11 @@ p {
 .top-section-img>img {
     width: 556px;
     height: 456px;
-    transition: transform 0.3s linear;
-    -webkit-transition: transform 0.3s linear;
-    -moz-transition: transform 0.3s linear;
-    -ms-transition: transform 0.3s linear;
-    -o-transition: transform 0.3s linear;
+    transition: transform 0.8s linear;
+    -webkit-transition: transform 0.8s linear;
+    -moz-transition: transform 0.8s linear;
+    -ms-transition: transform 0.8s linear;
+    -o-transition: transform 0.8s linear;
 }
 
 .top-section-img>img:hover {
@@ -204,6 +204,11 @@ p {
     font-size: 60px;
 }
 
+.next-match img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /* pre match styles */
 
 .pre-match {
@@ -218,28 +223,24 @@ p {
 }
 
 .coach-reaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
 }
 
 .coach-img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     position: absolute;
     left: auto;
-    top: -150px;
-}
-
-.coach-img2 {
-    width: 300px;
-    height: 300px;
-    position: absolute;
     right: auto;
     top: -150px;
 }
 
 .coach-img>img {
-    max-width: 60%;
-    max-height: 60%;
+    max-width: 100%;
+    max-height: 100%;
     background-color: rgb(211, 211, 211);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -252,7 +253,7 @@ p {
 .coach-info {
     width: 70%;
     margin: 0 auto;
-    padding: 16px 0;
+    padding: 70px 0;
 }
 
 .coach-info>p {
@@ -263,6 +264,38 @@ p {
 }
 
 /* pre match styles end */
+
+/* Newsletter styles  */
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8% auto;
+    background-color: #2D25A0;
+    color: #FFFFFF;
+    padding: 2% 0;
+}
+
+.newsletter>h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.newsletter>p {
+    text-align: center;
+    padding: 1.5% 0;
+    color: lightgray;
+}
+
+.newsletter-form{
+    display: flex;
+    align-items: center;
+}
+
+.email {
+    padding: 15px;
+}
 
 /* bottom section styling start*/
 
@@ -294,11 +327,11 @@ p {
 /* footer section styling start */
 
 .footer {
-    margin-top: 160px;
+    margin-top: 8%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 24px;
+    padding-bottom: 5%;
 }
 
 .footer>img {
@@ -378,7 +411,7 @@ p {
     }
     /* next match section  */
     .next-matches {
-        width: 60%;
+        width: 100%;
         box-shadow: none;
     }
     .next-matches h1 {
@@ -388,7 +421,7 @@ p {
         grid-template-columns: 1fr;
     }
     .next-match h1 {
-        font-size: 60px;
+        font-size: 40px;
     }
     .next-match img {
         max-width: 100%;
@@ -411,6 +444,15 @@ p {
     .coach-img>img {
         max-width: 100%;
         max-height: 100%;
+    }
+    /* pre match end */
+    /* newsletter section styles */
+    .newsletter>h1 {
+        font-size: 30px;
+    }
+    .newsletter-form{
+        display: flex;
+        flex-direction: column;
     }
     /* footer section */
     .footer {
