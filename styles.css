@@ -44,6 +44,19 @@ body {
 .top-section-img>img {
     width: 556px;
     height: 456px;
+    transition: transform 0.3s linear;
+    -webkit-transition: transform 0.3s linear;
+    -moz-transition: transform 0.3s linear;
+    -ms-transition: transform 0.3s linear;
+    -o-transition: transform 0.3s linear;
+}
+
+.top-section-img>img:hover {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    -ms-transform: rotateY(360deg);
+    -o-transform: rotateY(360deg);
 }
 
 .btn {
@@ -62,6 +75,14 @@ body {
     color: #FFFFFF;
 }
 
+.btn:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 @keyframes rush-in {
     from {
         transform: translateX(-600px);
@@ -69,7 +90,7 @@ body {
         -moz-transform: translateX(-600px);
         -ms-transform: translateX(-600px);
         -o-transform: translateX(-600px);
-}
+    }
     to {
         transform: translateX(0);
         -webkit-transform: translateX(0);
@@ -86,7 +107,7 @@ body {
         -moz-transform: translateX(600px);
         -ms-transform: translateX(600px);
         -o-transform: translateX(600px);
-}
+    }
     to {
         transform: translateX(0);
         -webkit-transform: translateX(0);
@@ -98,10 +119,15 @@ body {
 
 /* front page section styling */
 
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
 .front-page {
     width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -205,4 +231,151 @@ body {
     font-size: 32px;
     color: gray;
     /* background-color: lightgray; */
+}
+
+/* responsive styles */
+
+@media only screen and (max-width:688px) {
+    /* top section responsive */
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* .section-title {
+        padding-top: 45px;
+    } */
+    .section-title>h1 {
+        font-size: 2.25rem;
+        width: 17.375rem;
+        /* margin-bottom: 25px; */
+    }
+
+    /* .section-title>.btn{
+        margin-bottom: 50px;
+    } */
+    .top-section-img>img {
+        /* margin-left: 15px; */
+        width: 330px;
+        height: 260px;
+        /* margin-bottom: 60px; */
+    }
+
+    /* middle section responsive */
+    .front-page {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    /* bottom section */
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-info>h1 {
+        font-size: 1.875rem;
+        width: 18.375rem;
+    }
+    .bottom-img>img {
+        width: 328px;
+        height: 248px;
+    }
+
+    .section-info{
+        margin: 0 auto;
+    }
+
+    .section-info > p{
+        width: 330px;
+    }
+
+    .bottom-img{
+        margin-top: 30px;
+    }
+
+    /* footer section */
+
+    .footer{
+        align-items: center;
+    }
+
+    .footer>img{
+        width: 270px;
+        height: 65px;
+    }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 992px){
+
+    /* top section responsive */
+
+    .top-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .section-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title>h1{
+        font-size: 43px;
+        width: 96%;
+        padding: 16px;
+    }
+
+    .section-title>.btn{
+        width: 26%
+    }
+
+    .top-section-img> img{
+        width: 360px;
+        height: 284px;
+    }
+
+    /* front page responsive */
+
+    .front-page{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .bottom-img >img {
+        width: 365px;
+        height: 275px;
+    }
+
+    .bottom-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-info{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .section-info>h1 {
+        font-size: 32px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .section-info>p{
+        width: 60%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .section-info>.btn{
+        width: 26%;
+        margin-top: -16px;
+    }
+
+    .bottom-img{
+        margin-top: 40px;
+    }
 }
